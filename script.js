@@ -12,17 +12,29 @@ function checkPassword() {
     }
 }
 
-// Search for Current/Active Hunters
-function searchHunters() {
-    const searchInput = document.getElementById('hunterSearch').value.toLowerCase();
-    const hunterResult = document.getElementById('hunterResult');
+// Navigation between sections
+function navigateTo(sectionId) {
+    const sections = document.querySelectorAll('.section');
+    sections.forEach((section) => (section.style.display = 'none'));
 
-    if (searchInput === 'gon') {
-        hunterResult.innerText = 'Gon: Known for incredible strength and tenacity.';
-    } else if (searchInput === 'killua') {
-        hunterResult.innerText = 'Killua: Skilled in assassination and electricity techniques.';
+    if (sectionId === 'home') {
+        document.getElementById('home').style.display = 'block';
     } else {
-        hunterResult.innerText = 'No matching hunter found.';
+        document.getElementById(sectionId).style.display = 'block';
+    }
+}
+
+// Search for Info
+function searchInfo() {
+    const searchInput = document.getElementById('infoSearch').value.toLowerCase();
+    const infoResult = document.getElementById('infoResult');
+
+    if (searchInput === 'nen') {
+        infoResult.innerText = 'Nen: The technique that allows hunters to use their life energy.';
+    } else if (searchInput === 'hunter exam') {
+        infoResult.innerText = 'Hunter Exam: A grueling test to earn a Hunter License.';
+    } else {
+        infoResult.innerText = 'No information found.';
     }
 }
 
@@ -40,16 +52,16 @@ function searchBounties() {
     }
 }
 
-// Search for Info
-function searchInfo() {
-    const searchInput = document.getElementById('infoSearch').value.toLowerCase();
-    const infoResult = document.getElementById('infoResult');
+// Search for Active Hunters
+function searchHunters() {
+    const searchInput = document.getElementById('hunterSearch').value.toLowerCase();
+    const hunterResult = document.getElementById('hunterResult');
 
-    if (searchInput === 'nen') {
-        infoResult.innerText = 'Nen: The technique that allows hunters to use their life energy.';
-    } else if (searchInput === 'hunter exam') {
-        infoResult.innerText = 'Hunter Exam: A grueling test to earn a Hunter License.';
+    if (searchInput === 'gon') {
+        hunterResult.innerText = 'Gon: Known for incredible strength and tenacity.';
+    } else if (searchInput === 'killua') {
+        hunterResult.innerText = 'Killua: Skilled in assassination and electricity techniques.';
     } else {
-        infoResult.innerText = 'No information found.';
+        hunterResult.innerText = 'No matching hunter found.';
     }
 }
