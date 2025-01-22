@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunter Exam</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login">
+        <h1>Welcome to the Hunter Exam</h1>
+        <p>Please enter the password to proceed:</p>
+        <input type="password" id="password" placeholder="Enter Password">
+        <button onclick="checkPassword()">Submit</button>
+        <p id="error-message" style="color: red;"></p>
+    </div>
+
+    <div id="content" style="display: none;">
+        <h2>Hunter Exam Details</h2>
+        <p>This is the secret content only accessible by the correct password!</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
