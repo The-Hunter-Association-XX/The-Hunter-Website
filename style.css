@@ -1,22 +1,26 @@
 /* General body and text styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #333;
-    color: white;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #222, #444);
+    color: #fff;
     margin: 0;
     padding: 0;
 }
 
-/* Title styling */
+/* Title Styling */
 h1, h2 {
     color: #4CAF50; /* Green color for titles */
     text-align: center;
+    font-size: 36px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Login Section */
 #login {
     text-align: center;
-    padding: 50px;
+    padding: 100px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
 }
 
 /* Hide content until logged in */
@@ -27,22 +31,25 @@ h1, h2 {
 /* Section styling (hides sections until selected) */
 .section {
     display: none;
-    margin: 20px;
+    margin: 20px auto;
     padding: 20px;
     border: 1px solid #444;
-    border-radius: 5px;
-    background-color: #222;
+    border-radius: 10px;
+    background-color: rgba(30, 30, 30, 0.8);
+    width: 80%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
 }
 
 /* Style for search input fields */
 input[type="text"] {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin: 20px 0;
     border-radius: 5px;
     border: 1px solid #444;
-    background-color: #555;
+    background-color: #333;
     color: white;
+    font-size: 16px;
 }
 
 /* Style for lists of items */
@@ -53,17 +60,19 @@ ul {
 }
 
 li {
-    padding: 10px;
-    border-bottom: 1px solid #444;
+    padding: 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
 
 /* Hover effect for list items */
 li:hover {
-    background-color: #444;
+    background-color: #555;
     cursor: pointer;
+    transform: translateX(10px);
 }
 
-/* Style for visible section items */
+/* Styling for visible section items */
 #infoList, #bountyList, #hunterList {
     max-height: 400px;
     overflow-y: auto;
@@ -72,8 +81,18 @@ li:hover {
 /* Active section list item styling */
 .infoItem, .bountyItem, .hunterItem {
     cursor: pointer;
-    padding: 8px;
-    border-bottom: 1px solid #555;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    background-color: #222;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for list items */
+.infoItem:hover, .bountyItem:hover, .hunterItem:hover {
+    background-color: #444;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 /* Show content for clicked items */
@@ -81,6 +100,45 @@ li:hover {
     display: none;
     padding: 15px;
     background-color: #333;
-    border-radius: 5px;
-    margin-top: 10px;
+    border-radius: 10px;
+    margin-top: 15px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Style for the buttons */
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #45a049;
+}
+
+/* Back button */
+button:active {
+    background-color: #3e8e41;
+}
+
+/* Add transitions and animations for smoother interactions */
+input[type="text"], button {
+    transition: all 0.3s ease;
+}
+
+/* Add spacing and padding to make it more breathable */
+#content {
+    padding: 50px;
+    margin-top: 20px;
+}
+
+#home button {
+    margin: 10px;
+    font-size: 20px;
 }
