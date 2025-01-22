@@ -20,37 +20,28 @@
 
     <!-- Main Sections (hidden by default) -->
     <div id="content" style="display: none;">
-        <!-- Current Targets Section -->
-        <section id="targets">
-            <h2>Current Targets (Bounties)</h2>
-            <p>No bounties available. Check back later.</p>
+        <!-- Current/Active Hunters Section -->
+        <section id="active-hunters">
+            <h2>Current/Active Hunters</h2>
+            <input type="text" id="hunterSearch" placeholder="Search for a hunter...">
+            <button onclick="searchHunters()">Search</button>
+            <p id="hunterResult"></p>
         </section>
 
-        <!-- Hunters Section -->
-        <section id="hunters">
-            <h2>Hunters</h2>
-            <p>Hunter Names:</p>
-            <ul>
-                <li>Gon</li>
-                <li>Killua</li>
-                <li>Leorio</li>
-                <li>Kurapika</li>
-            </ul>
+        <!-- Bounties Section -->
+        <section id="bounties">
+            <h2>Current Bounties</h2>
+            <input type="text" id="bountySearch" placeholder="Search for a bounty...">
+            <button onclick="searchBounties()">Search</button>
+            <p id="bountyResult"></p>
         </section>
 
-        <!-- Search Section -->
-        <section id="search">
-            <h2>Search for Information</h2>
-            <input type="text" id="searchInput" placeholder="Search for info...">
-            <button onclick="performSearch()">Search</button>
-            <p id="searchResult"></p>
-        </section>
-
-        <!-- Map Section -->
-        <section id="map">
-            <h2>Map</h2>
-            <p>Current Objective Spots:</p>
-            <img src="https://via.placeholder.com/600x400" alt="Map Placeholder">
+        <!-- Info Section -->
+        <section id="info">
+            <h2>Info</h2>
+            <input type="text" id="infoSearch" placeholder="Search for information...">
+            <button onclick="searchInfo()">Search</button>
+            <p id="infoResult"></p>
         </section>
     </div>
 
