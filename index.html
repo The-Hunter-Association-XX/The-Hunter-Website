@@ -1,25 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hunter Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>Welcome to the Hunter Website</h1>
+
+    <!-- Login Section -->
     <div id="login">
-        <h1>Welcome to the Hunter Website</h1>
-        <p>Please enter the password to proceed:</p>
-        <input type="password" id="password" placeholder="Enter Password">
-        <button onclick="checkPassword()">Submit</button>
-        <p id="error-message" style="color: red;"></p>
+        <h2>Login</h2>
+        <form onsubmit="return checkPassword()">
+            <label for="password">Enter Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Submit</button>
+        </form>
+        <p id="error-message"></p>
     </div>
 
-    <div id="content" style="display: none;">
-        <h2>Hunter Website Details</h2>
-        <p>This is the content only accessible by your correct password!</p>
-        <p><a href="info.html">Go to Hunter Info</a></p> <!-- The link to the info page -->
+    <!-- Current Targets Section -->
+    <div id="targets" style="display: none;">
+        <h2>Current Targets</h2>
+        <ul id="bounty-list">
+            <li>Target 1: Information goes here...</li>
+            <li>Target 2: Information goes here...</li>
+        </ul>
+    </div>
+
+    <!-- Hunters Section -->
+    <div id="hunters" style="display: none;">
+        <h2>Hunters with Access</h2>
+        <ul id="hunter-list">
+            <li>Hunter A</li>
+            <li>Hunter B</li>
+        </ul>
+    </div>
+
+    <!-- Search Section -->
+    <div id="search" style="display: none;">
+        <h2>Search Information</h2>
+        <input type="text" id="searchInput" placeholder="Type a name or keyword">
+        <button onclick="searchInfo()">Search</button>
+        <p id="searchResults"></p>
+    </div>
+
+    <!-- Map Section -->
+    <div id="map" style="display: none; height: 400px; margin-top: 20px;">
+        <h2>Objective Spots</h2>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.5869020240536!2d-122.41941568468159!3d37.774929679758446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085816e2632a947%3A0xc8e1c1e8d203cf9b!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1692649172856!5m2!1sen!2sus" 
+            width="100%" 
+            height="400" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
     </div>
 
     <script src="script.js"></script>
