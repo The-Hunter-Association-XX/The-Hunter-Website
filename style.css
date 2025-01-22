@@ -41,6 +41,10 @@ button:hover {
 }
 
 /* Content sections */
+#content {
+    margin-top: 20px;
+}
+
 section {
     margin: 20px 0;
     padding: 10px;
