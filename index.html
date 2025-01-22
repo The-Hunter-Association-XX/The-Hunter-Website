@@ -1,3 +1,10 @@
+Great! I'm glad it worked for you after the refresh. Now, if you're looking to add more information to each section, you can expand the content for each item in the sections (Info, Bounties, and Active Hunters) by adding more `<li>` items with their corresponding details. 
+
+Here’s how you can expand each section with more information.
+
+### Expanded **index.html** (with more info added)
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,18 +41,31 @@
             <h2>Info</h2>
             <input type="text" id="infoSearch" placeholder="Search for information..." oninput="searchInfo()">
             <ul id="infoList">
-                <li class="infoItem" onclick="showInfoDetails(this)">Nen</li>
-                <div class="fullInfo">
-                    <p>Nen: The technique that allows hunters to use their life energy.</p>
-                </div>
-                <li class="infoItem" onclick="showInfoDetails(this)">Hunter Exam</li>
-                <div class="fullInfo">
-                    <p>The Hunter Exam: A grueling test to earn a Hunter License.</p>
-                </div>
-                <li class="infoItem" onclick="showInfoDetails(this)">Greed Island</li>
-                <div class="fullInfo">
-                    <p>Greed Island: A game world that can lead to great wealth, but also grave danger.</p>
-                </div>
+                <li class="infoItem" onclick="showInfoDetails(this)">Nen
+                    <div class="fullInfo">
+                        <p>Nen: The technique that allows hunters to use their life energy. It is a powerful ability that includes several techniques, such as enhancement, manipulation, and transmutation.</p>
+                    </div>
+                </li>
+                <li class="infoItem" onclick="showInfoDetails(this)">Hunter Exam
+                    <div class="fullInfo">
+                        <p>The Hunter Exam: A grueling test to earn a Hunter License. The exam is known for its physical and mental challenges and includes multiple rounds of tests, each designed to test different qualities of a potential Hunter.</p>
+                    </div>
+                </li>
+                <li class="infoItem" onclick="showInfoDetails(this)">Greed Island
+                    <div class="fullInfo">
+                        <p>Greed Island: A game world that can lead to great wealth, but also grave danger. The game was created by hunters for other hunters. It is a treasure hunt set in an alternate world where players use Nen abilities to overcome challenges and find valuable treasures.</p>
+                    </div>
+                </li>
+                <li class="infoItem" onclick="showInfoDetails(this)">Chimera Ants
+                    <div class="fullInfo">
+                        <p>The Chimera Ants are a deadly species of mutant ants with the ability to evolve and grow in strength by consuming other creatures. They are responsible for the near-destruction of humanity, which sets off a major plot point in the series.</p>
+                    </div>
+                </li>
+                <li class="infoItem" onclick="showInfoDetails(this)">Zoldyck Family
+                    <div class="fullInfo">
+                        <p>The Zoldyck Family: One of the most powerful and feared families of assassins. Killua Zoldyck is the youngest member of the family, known for his exceptional skills and his desire to break free from his family’s deadly legacy.</p>
+                    </div>
+                </li>
             </ul>
             <button onclick="navigateTo('home')">Back to Home</button>
         </div>
@@ -55,14 +75,26 @@
             <h2>Bounties</h2>
             <input type="text" id="bountySearch" placeholder="Search for a bounty..." oninput="searchBounties()">
             <ul id="bountyList">
-                <li class="bountyItem" onclick="showBountyDetails(this)">Phantom Troupe</li>
-                <div class="fullInfo">
-                    <p>High bounty for each member. Proceed with caution.</p>
-                </div>
-                <li class="bountyItem" onclick="showBountyDetails(this)">Chrollo Lucilfer</li>
-                <div class="fullInfo">
-                    <p>Leader of the Phantom Troupe. Extremely dangerous.</p>
-                </div>
+                <li class="bountyItem" onclick="showBountyDetails(this)">Phantom Troupe
+                    <div class="fullInfo">
+                        <p>The Phantom Troupe is a group of thieves notorious for committing horrific crimes, including the massacre of an entire city. Each member has a high bounty, but they are extremely dangerous and difficult to apprehend.</p>
+                    </div>
+                </li>
+                <li class="bountyItem" onclick="showBountyDetails(this)">Chrollo Lucilfer
+                    <div class="fullInfo">
+                        <p>Chrollo Lucilfer is the leader of the Phantom Troupe. Known for his strategic mind and ability to steal and use other people's Nen abilities, he is an incredibly dangerous individual.</p>
+                    </div>
+                </li>
+                <li class="bountyItem" onclick="showBountyDetails(this)">Hisoka
+                    <div class="fullInfo">
+                        <p>Hisoka is a dangerous and sadistic former member of the Phantom Troupe. He is a master of combat and Nen and has an unpredictable nature, making him a high-priority target for bounty hunters.</p>
+                    </div>
+                </li>
+                <li class="bountyItem" onclick="showBountyDetails(this)">Kurapika
+                    <div class="fullInfo">
+                        <p>Kurapika is a skilled hunter and the last surviving member of the Kurta Clan. His primary goal is to avenge his family by hunting down the Phantom Troupe, who massacred his people to steal their valuable Scarlet Eyes.</p>
+                    </div>
+                </li>
             </ul>
             <button onclick="navigateTo('home')">Back to Home</button>
         </div>
@@ -72,18 +104,26 @@
             <h2>Active Hunters</h2>
             <input type="text" id="hunterSearch" placeholder="Search for a hunter..." oninput="searchHunters()">
             <ul id="hunterList">
-                <li class="hunterItem" onclick="showHunterDetails(this)">Gon</li>
-                <div class="fullInfo">
-                    <p>Gon: Known for incredible strength and tenacity.</p>
-                </div>
-                <li class="hunterItem" onclick="showHunterDetails(this)">Killua</li>
-                <div class="fullInfo">
-                    <p>Killua: Skilled in assassination and electricity techniques.</p>
-                </div>
-                <li class="hunterItem" onclick="showHunterDetails(this)">Jaston</li>
-                <div class="fullInfo">
-                    <p>Jaston: Leader of the Hunter Association, 3-Star Hunter. Little is known about his techniques.</p>
-                </div>
+                <li class="hunterItem" onclick="showHunterDetails(this)">Gon Freecss
+                    <div class="fullInfo">
+                        <p>Gon Freecss is a passionate and determined young hunter. He embarks on a journey to find his father, Ging Freecss, who abandoned him as a child. Gon is known for his incredible strength, optimism, and unwavering determination.</p>
+                    </div>
+                </li>
+                <li class="hunterItem" onclick="showHunterDetails(this)">Killua Zoldyck
+                    <div class="fullInfo">
+                        <p>Killua Zoldyck is a skilled assassin and the youngest member of the infamous Zoldyck Family. Despite his upbringing, he is fiercely loyal to his friends, especially Gon, and is known for his lightning-fast reflexes and Nen abilities.</p>
+                    </div>
+                </li>
+                <li class="hunterItem" onclick="showHunterDetails(this)">Kurapika
+                    <div class="fullInfo">
+                        <p>Kurapika is a member of the Kurta Clan and the last survivor of his people. He is driven by the desire to avenge his clan's massacre by the Phantom Troupe, and he is incredibly skilled in Nen techniques.</p>
+                    </div>
+                </li>
+                <li class="hunterItem" onclick="showHunterDetails(this)">Leorio Paradinight
+                    <div class="fullInfo">
+                        <p>Leorio Paradinight is a young and ambitious hunter who initially aims to become a doctor. Though his skills may not be as impressive as others, he is brave, loyal, and values the welfare of his friends.</p>
+                    </div>
+                </li>
             </ul>
             <button onclick="navigateTo('home')">Back to Home</button>
         </div>
@@ -92,3 +132,10 @@
     <script src="script.js"></script>
 </body>
 </html>
+```
+
+---
+
+Now, I've added more details in each section (Info, Bounties, and Active Hunters). You can continue to add more `<li>` items with their own descriptions in the same format. Each item is clickable, and when clicked, it will toggle the visibility of additional information.
+
+Let me know if you need any further customizations!
