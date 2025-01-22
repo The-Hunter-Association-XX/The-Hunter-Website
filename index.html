@@ -33,7 +33,10 @@
         <div id="info" class="section" style="display: none;">
             <h2>Info</h2>
             <input type="text" id="infoSearch" placeholder="Search for information..." oninput="searchInfo()">
-            <div id="infoResult"></div>
+            <ul id="infoList">
+                <li class="infoItem">Nen: The technique that allows hunters to use their life energy.</li>
+                <li class="infoItem">Hunter Exam: A grueling test to earn a Hunter License.</li>
+            </ul>
             <button onclick="navigateTo('home')">Back to Home</button>
         </div>
 
@@ -41,7 +44,10 @@
         <div id="bounties" class="section" style="display: none;">
             <h2>Bounties</h2>
             <input type="text" id="bountySearch" placeholder="Search for a bounty..." oninput="searchBounties()">
-            <div id="bountyResult"></div>
+            <ul id="bountyList">
+                <li class="bountyItem">Phantom Troupe: High bounty for each member. Proceed with caution.</li>
+                <li class="bountyItem">Chrollo Lucilfer: Leader of the Phantom Troupe. Extremely dangerous.</li>
+            </ul>
             <button onclick="navigateTo('home')">Back to Home</button>
         </div>
 
@@ -49,7 +55,11 @@
         <div id="active-hunters" class="section" style="display: none;">
             <h2>Active Hunters</h2>
             <input type="text" id="hunterSearch" placeholder="Search for a hunter..." oninput="searchHunters()">
-            <div id="hunterResult"></div>
+            <ul id="hunterList">
+                <li class="hunterItem">Gon: Known for incredible strength and tenacity.</li>
+                <li class="hunterItem">Killua: Skilled in assassination and electricity techniques.</li>
+                <li class="hunterItem">Jaston: Leader of the Hunter Association, 3-Star Hunter. Little is known about his techniques.</li>
+            </ul>
             <button onclick="navigateTo('home')">Back to Home</button>
         </div>
     </div>
