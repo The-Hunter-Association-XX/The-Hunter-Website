@@ -1,65 +1,86 @@
-/* General styles */
+/* General body and text styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: #ffffff;
+    background-color: #333;
+    color: white;
     margin: 0;
     padding: 0;
+}
+
+/* Title styling */
+h1, h2 {
+    color: #4CAF50; /* Green color for titles */
     text-align: center;
 }
 
-/* Login section */
+/* Login Section */
 #login {
-    margin-top: 20%;
+    text-align: center;
+    padding: 50px;
 }
 
-input, button {
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
+/* Hide content until logged in */
+#content {
+    display: none;
+}
+
+/* Section styling (hides sections until selected) */
+.section {
+    display: none;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #444;
     border-radius: 5px;
+    background-color: #222;
 }
 
-input {
-    width: 200px;
+/* Style for search input fields */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #555;
+    color: white;
 }
 
-button {
-    background-color: #28a745; /* Green button */
-    color: #fff;
+/* Style for lists of items */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid #444;
+}
+
+/* Hover effect for list items */
+li:hover {
+    background-color: #444;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #1c7c34;
+/* Style for visible section items */
+#infoList, #bountyList, #hunterList {
+    max-height: 400px;
+    overflow-y: auto;
 }
 
-/* Error message */
-#error-message {
-    color: #ff4d4d;
-    font-weight: bold;
+/* Active section list item styling */
+.infoItem, .bountyItem, .hunterItem {
+    cursor: pointer;
+    padding: 8px;
+    border-bottom: 1px solid #555;
 }
 
-/* Content sections */
-#content {
-    margin-top: 20px;
-}
-
-section {
-    margin: 20px 0;
-    padding: 10px;
-    border: 1px solid #444;
+/* Show content for clicked items */
+.fullInfo {
+    display: none;
+    padding: 15px;
+    background-color: #333;
     border-radius: 5px;
-    background-color: #1e1e1e;
-}
-
-/* Titles and headings */
-h1, h2 {
-    color: #28a745; /* Green titles */
-}
-
-/* Placeholder text for inputs */
-input::placeholder {
-    color: #aaa;
-    font-style: italic;
+    margin-top: 10px;
 }
