@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hunter Exam</title>
+    <title>Hunter Website</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="login">
         <h1>Welcome to the Hunter Website</h1>
-        <p>Please enter your password to proceed:</p>
+        <p>Please enter the password to proceed:</p>
         <input type="password" id="password" placeholder="Enter Password">
         <button onclick="checkPassword()">Submit</button>
         <p id="error-message" style="color: red;"></p>
@@ -18,6 +18,7 @@
     <div id="content" style="display: none;">
         <h2>Hunter Exam Details</h2>
         <p>This is the secret content only accessible by the correct password!</p>
+        <p><a href="info.html">Go to Hunter Info</a></p> <!-- The link to the info page -->
     </div>
 
     <script src="script.js"></script>
