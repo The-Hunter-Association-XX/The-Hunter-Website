@@ -86,5 +86,16 @@ function searchList(sectionId, dataArray, searchField) {
                 <p>${item.role || item.wantedFor || item.content}</p>
             </div>
         `;
-   
+    });
+}
 
+// Add search event listeners
+document.getElementById("hunterSearch").addEventListener("input", function() {
+    searchList("hunterList", activeHunters, "hunterSearch");
+});
+document.getElementById("bountySearch").addEventListener("input", function() {
+    searchList("bountyList", currentBounties, "bountySearch");
+});
+document.getElementById("infoSearch").addEventListener("input", function() {
+    searchList("infoList", infoSection, "infoSearch");
+});
