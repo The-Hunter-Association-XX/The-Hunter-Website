@@ -1,101 +1,187 @@
-/* Global Styles */
+/* General body and text styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: #ddd;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #222, #444);
+    color: #fff;
     margin: 0;
     padding: 0;
 }
 
-h2, h3 {
-    color: #8bc34a;
-}
-
-h1 {
+/* Title Styling */
+h1, h2 {
+    color: #4CAF50; /* Green color for titles */
     text-align: center;
-    color: #8bc34a;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 10px;
-}
-
-nav ul li a {
-    color: #8bc34a;
-    text-decoration: none;
-}
-
-#passwordPage {
-    text-align: center;
-    margin-top: 50px;
-}
-
-input[type="text"], input[type="password"] {
-    padding: 10px;
-    font-size: 16px;
-    width: 80%;
-    margin: 10px 0;
-    border-radius: 10px;
-    border: 1px solid #8bc34a;
-    background-color: #1f1f1f;
-    color: #ddd;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #8bc34a;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #4caf50;
-}
-
-#homePage {
-    display: none;
-    text-align: center;
-}
-
-#activeHunters, #currentBounties, #infoSection {
+    font-size: 36px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin-bottom: 30px;
 }
 
-#hunterList, #bountyList, #infoList {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-    padding: 10px;
-}
-
-#hunterList div, #bountyList div, #infoList div {
-    background: #1f1f1f;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+/* Login Section */
+#login {
     text-align: center;
+    padding: 100px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    margin-top: 100px;
 }
 
-#hunterList div:hover, #bountyList div:hover, #infoList div:hover {
-    background: #333;
+/* Hide content until logged in */
+#content {
+    display: none;
 }
 
-input[type="text"] {
-    padding: 10px;
-    font-size: 16px;
+/* Section styling (hides sections until selected) */
+.section {
+    display: none;
+    margin: 40px auto;
+    padding: 30px;
+    border: 1px solid #444;
+    border-radius: 15px;
+    background-color: rgba(30, 30, 30, 0.8);
     width: 80%;
-    margin: 10px auto;
-    display: block;
-    border-radius: 5px;
-    border: 1px solid #8bc34a;
-    background-color: #1f1f1f;
-    color: #ddd;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.6);
+}
+
+/* Style for search input fields */
+input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 10px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* Style for lists of items */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Style for individual list items */
+li {
+    padding: 20px;
+    border-radius: 10px;
+    margin: 15px 0;
+    background-color: #333;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for list items */
+li:hover {
+    background-color: #444;
+    cursor: pointer;
+    transform: translateX(10px);
+}
+
+/* Styling for visible section items */
+#infoList, #bountyList, #hunterList {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+/* Active section list item styling */
+.infoItem, .bountyItem, .hunterItem {
+    cursor: pointer;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    background-color: #222;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for list items */
+.infoItem:hover, .bountyItem:hover, .hunterItem:hover {
+    background-color: #444;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Show content for clicked items */
+.fullInfo {
+    display: none;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 15px;
+    margin-top: 20px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Style for the buttons */
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #45a049;
+}
+
+/* Back button */
+button:active {
+    background-color: #3e8e41;
+}
+
+/* Add transitions and animations for smoother interactions */
+input[type="text"], button {
+    transition: all 0.3s ease;
+}
+
+/* Add spacing and padding to make it more breathable */
+#content {
+    padding: 50px;
+    margin-top: 40px;
+}
+
+/* Back to Home button */
+#home button {
+    margin: 10px;
+    font-size: 20px;
+}
+
+/* Improve alignment and padding for the sections */
+.section ul {
+    padding: 20px;
+}
+
+/* Bigger, rounded buttons in sections */
+button.section-btn {
+    padding: 15px 25px;
+    font-size: 18px;
+    background-color: #333;
+    border-radius: 12px;
+    color: #4CAF50;
+    margin-top: 20px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    h1, h2 {
+        font-size: 28px;
+    }
+
+    .section {
+        width: 90%;
+    }
+
+    button {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    input[type="text"] {
+        font-size: 14px;
+    }
 }
