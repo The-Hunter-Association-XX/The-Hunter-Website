@@ -1,36 +1,27 @@
-// Check Password Function
+// Password validation
 function checkPassword() {
     const password = document.getElementById('password').value;
-    if (password === 'hunterx') { // Replace with your actual password
+
+    if (password === 'hunter2023') { // Replace 'hunter2023' with your password
         document.getElementById('login').style.display = 'none';
-        document.getElementById('targets').style.display = 'block';
-        document.getElementById('hunters').style.display = 'block';
-        document.getElementById('search').style.display = 'block';
-        document.getElementById('map').style.display = 'block';
+        document.getElementById('content').style.display = 'block';
         return false; // Prevent form submission
     } else {
         document.getElementById('error-message').innerText = 'Incorrect password.';
-        return false;
+        return false; // Prevent form submission
     }
 }
 
-// Search Function
-function searchInfo() {
-    const input = document.getElementById('searchInput').value.toLowerCase();
-    const results = document.getElementById('searchResults');
-    const data = [
-        "Target 1: Information goes here...",
-        "Target 2: Information goes here...",
-        "Hunter A: Information here...",
-        "Hunter B: Information here..."
-    ];
+// Search functionality
+function performSearch() {
+    const searchInput = document.getElementById('searchInput').value.toLowerCase();
+    const searchResult = document.getElementById('searchResult');
 
-    // Simple search algorithm
-    const matches = data.filter(item => item.toLowerCase().includes(input));
-
-    if (matches.length > 0) {
-        results.innerHTML = "Results:<br>" + matches.join("<br>");
+    if (searchInput === 'kurapika') {
+        searchResult.innerText = 'Kurapika: Specialist in chain techniques.';
+    } else if (searchInput === 'gon') {
+        searchResult.innerText = 'Gon: Known for his incredible strength and tenacity.';
     } else {
-        results.innerHTML = "No matches found.";
+        searchResult.innerText = 'No information found.';
     }
 }
