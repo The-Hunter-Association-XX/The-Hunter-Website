@@ -1,7 +1,7 @@
 // Check Password Function
 function checkPassword() {
     const password = document.getElementById('password').value;
-    if (password === 'hunter2023') { // Replace with your actual password
+    if (password === 'hunterx') { // Replace with your actual password
         document.getElementById('login').style.display = 'none';
         document.getElementById('targets').style.display = 'block';
         document.getElementById('hunters').style.display = 'block';
