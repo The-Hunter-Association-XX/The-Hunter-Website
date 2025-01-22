@@ -32,27 +32,24 @@
         <!-- Info Section -->
         <div id="info" class="section" style="display: none;">
             <h2>Info</h2>
-            <input type="text" id="infoSearch" placeholder="Search for information...">
-            <button onclick="searchInfo()">Search</button>
-            <p id="infoResult"></p>
+            <input type="text" id="infoSearch" placeholder="Search for information..." oninput="searchInfo()">
+            <div id="infoResult"></div>
             <button onclick="navigateTo('home')">Back to Home</button>
         </div>
 
         <!-- Bounties Section -->
         <div id="bounties" class="section" style="display: none;">
             <h2>Bounties</h2>
-            <input type="text" id="bountySearch" placeholder="Search for a bounty...">
-            <button onclick="searchBounties()">Search</button>
-            <p id="bountyResult"></p>
+            <input type="text" id="bountySearch" placeholder="Search for a bounty..." oninput="searchBounties()">
+            <div id="bountyResult"></div>
             <button onclick="navigateTo('home')">Back to Home</button>
         </div>
 
         <!-- Active Hunters Section -->
         <div id="active-hunters" class="section" style="display: none;">
             <h2>Active Hunters</h2>
-            <input type="text" id="hunterSearch" placeholder="Search for a hunter...">
-            <button onclick="searchHunters()">Search</button>
-            <p id="hunterResult"></p>
+            <input type="text" id="hunterSearch" placeholder="Search for a hunter..." oninput="searchHunters()">
+            <div id="hunterResult"></div>
             <button onclick="navigateTo('home')">Back to Home</button>
         </div>
     </div>
@@ -60,4 +57,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
