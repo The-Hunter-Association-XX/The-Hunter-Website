@@ -5,6 +5,7 @@ function checkPassword() {
     if (password === 'hunterx') { // Updated password
         document.getElementById('login').style.display = 'none';
         document.getElementById('content').style.display = 'block';
+        navigateTo('home'); // Go to home after successful login
         return false; // Prevent form submission
     } else {
         document.getElementById('error-message').innerText = 'Incorrect password.';
@@ -14,14 +15,14 @@ function checkPassword() {
 
 // Navigation between sections
 function navigateTo(sectionId) {
+    // Hide all sections
     const sections = document.querySelectorAll('.section');
-    sections.forEach((section) => (section.style.display = 'none'));
+    sections.forEach((section) => {
+        section.style.display = 'none';
+    });
 
-    if (sectionId === 'home') {
-        document.getElementById('home').style.display = 'block';
-    } else {
-        document.getElementById(sectionId).style.display = 'block';
-    }
+    // Show the selected section
+    document.getElementById(sectionId).style.display = 'block';
 }
 
 // Search for Info
