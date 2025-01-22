@@ -2,7 +2,7 @@
 function checkPassword() {
     const password = document.getElementById('password').value;
 
-    if (password === 'hunter2023') { // Replace 'hunter2023' with your password
+    if (password === 'hunterx') { // Replace 'hunter2023' with your password
         document.getElementById('login').style.display = 'none';
         document.getElementById('content').style.display = 'block';
         return false; // Prevent form submission
