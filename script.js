@@ -2,7 +2,7 @@
 function checkPassword() {
     const password = document.getElementById('password').value;
 
-    if (password === 'hunterx') { // Replace 'hunter2023' with your password
+    if (password === 'hunterx') { // Updated password
         document.getElementById('login').style.display = 'none';
         document.getElementById('content').style.display = 'block';
         return false; // Prevent form submission
@@ -12,16 +12,44 @@ function checkPassword() {
     }
 }
 
-// Search functionality
-function performSearch() {
-    const searchInput = document.getElementById('searchInput').value.toLowerCase();
-    const searchResult = document.getElementById('searchResult');
+// Search for Current/Active Hunters
+function searchHunters() {
+    const searchInput = document.getElementById('hunterSearch').value.toLowerCase();
+    const hunterResult = document.getElementById('hunterResult');
 
-    if (searchInput === 'kurapika') {
-        searchResult.innerText = 'Kurapika: Specialist in chain techniques.';
-    } else if (searchInput === 'gon') {
-        searchResult.innerText = 'Gon: Known for his incredible strength and tenacity.';
+    if (searchInput === 'gon') {
+        hunterResult.innerText = 'Gon: Known for incredible strength and tenacity.';
+    } else if (searchInput === 'killua') {
+        hunterResult.innerText = 'Killua: Skilled in assassination and electricity techniques.';
     } else {
-        searchResult.innerText = 'No information found.';
+        hunterResult.innerText = 'No matching hunter found.';
+    }
+}
+
+// Search for Bounties
+function searchBounties() {
+    const searchInput = document.getElementById('bountySearch').value.toLowerCase();
+    const bountyResult = document.getElementById('bountyResult');
+
+    if (searchInput === 'phantom troupe') {
+        bountyResult.innerText = 'Phantom Troupe: High bounty for each member. Proceed with caution.';
+    } else if (searchInput === 'chrollo') {
+        bountyResult.innerText = 'Chrollo Lucilfer: Leader of the Phantom Troupe. Extremely dangerous.';
+    } else {
+        bountyResult.innerText = 'No bounties found for the entered name.';
+    }
+}
+
+// Search for Info
+function searchInfo() {
+    const searchInput = document.getElementById('infoSearch').value.toLowerCase();
+    const infoResult = document.getElementById('infoResult');
+
+    if (searchInput === 'nen') {
+        infoResult.innerText = 'Nen: The technique that allows hunters to use their life energy.';
+    } else if (searchInput === 'hunter exam') {
+        infoResult.innerText = 'Hunter Exam: A grueling test to earn a Hunter License.';
+    } else {
+        infoResult.innerText = 'No information found.';
     }
 }
