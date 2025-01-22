@@ -25,16 +25,7 @@ function navigateTo(sectionId) {
     document.getElementById(sectionId).style.display = 'block';
 }
 
-// Function to sort items alphabetically
-function sortList(listId) {
-    const list = document.getElementById(listId);
-    const items = Array.from(list.getElementsByTagName('li'));
-    items.sort((a, b) => a.innerText.localeCompare(b.innerText)); // Sort alphabetically
-    list.innerHTML = ''; // Clear the list
-    items.forEach(item => list.appendChild(item)); // Append sorted items
-}
-
-// Function to filter Info section
+// Search functions
 function searchInfo() {
     const searchInput = document.getElementById('infoSearch').value.toLowerCase();
     const infoList = document.getElementById('infoList');
@@ -45,7 +36,6 @@ function searchInfo() {
     });
 }
 
-// Function to filter Bounties section
 function searchBounties() {
     const searchInput = document.getElementById('bountySearch').value.toLowerCase();
     const bountyList = document.getElementById('bountyList');
@@ -56,7 +46,6 @@ function searchBounties() {
     });
 }
 
-// Function to filter Active Hunters section
 function searchHunters() {
     const searchInput = document.getElementById('hunterSearch').value.toLowerCase();
     const hunterList = document.getElementById('hunterList');
@@ -67,11 +56,25 @@ function searchHunters() {
     });
 }
 
+// Show details for clicked item
+function showInfoDetails(item) {
+    const fullInfo = item.nextElementSibling;
+    fullInfo.style.display = fullInfo.style.display === 'block' ? 'none' : 'block';
+}
+
+function showBountyDetails(item) {
+    const fullInfo = item.nextElementSibling;
+    fullInfo.style.display = fullInfo.style.display === 'block' ? 'none' : 'block';
+}
+
+function showHunterDetails(item) {
+    const fullInfo = item.nextElementSibling;
+    fullInfo.style.display = fullInfo.style.display === 'block' ? 'none' : 'block';
+}
+
 // Sort items when the page loads
 window.onload = function() {
     sortList('infoList');
     sortList('bountyList');
     sortList('hunterList');
 };
-
-
