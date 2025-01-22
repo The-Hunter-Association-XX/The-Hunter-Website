@@ -62,6 +62,8 @@ function searchHunters() {
         hunterResult.innerText = 'Gon: Known for incredible strength and tenacity.';
     } else if (searchInput === 'killua') {
         hunterResult.innerText = 'Killua: Skilled in assassination and electricity techniques.';
+    } else if (searchInput === 'jaston') { // Adding Jaston
+        hunterResult.innerText = 'Jaston: Leader of the Hunter Association, 3-Star Hunter. Little is known about his techniques.';
     } else {
         hunterResult.innerText = 'No matching hunter found.';
     }
