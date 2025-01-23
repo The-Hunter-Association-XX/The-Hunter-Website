@@ -1,14 +1,19 @@
 // Password validation
 function checkPassword() {
-    const password = document.getElementById('password').value;
+    // The original password is "YorkNew251", Base64 encoded
+    const encodedPassword = 'WW9ya01ldzI1MQ=='; // "YorkNew251" in Base64
+    const password = atob(encodedPassword); // Decode the Base64 string
 
-    if (password === 'quitcheatingfr') { 
+    // Get user input
+    const userInput = document.getElementById('password').value;
+
+    if (userInput === password) {
+        alert("Access granted");
         document.getElementById('login').style.display = 'none';
         document.getElementById('content').style.display = 'block';
-        navigateTo('home'); // Go to home after successful login
         return false; // Prevent form submission
     } else {
-        document.getElementById('error-message').innerText = 'Incorrect password.';
+        alert("Access denied");
         return false; // Prevent form submission
     }
 }
