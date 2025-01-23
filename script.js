@@ -1,4 +1,4 @@
-// Password validation (Password == Quitcheating)
+// Password validation (Password == Quitcheatinglookinghere)
 function checkPassword() {
     const password = document.getElementById('password').value;
 
