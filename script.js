@@ -1,7 +1,7 @@
 // Password validation
 function checkPassword() {
-    // The original password is "YorkNew251", Base64 encoded
-    const encodedPassword = 'WW9ya01ldzI1MQ=='; // "YorkNew251" in Base64
+    // The original password is "", Base64 encoded
+    const encodedPassword = 'WW9ya01ldzI1MQ=='; // "" in Base64
     const password = atob(encodedPassword); // Decode the Base64 string
 
     // Get user input
