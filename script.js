@@ -1,4 +1,4 @@
-// Password validation (Password == Quitcheatinglookinghere)
+// Password validation (Password == Quitcheatinglookinghere) ,:<HunterX>
 function checkPassword() {
     const password = document.getElementById('password').value;
 
