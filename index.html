@@ -28,10 +28,71 @@
             <button onclick="navigateTo('bounties')">Bounties</button>
             <button onclick="navigateTo('active-hunters')">Active Hunters</button>
         </div>
-        <!-- Other Sections -->
+
+        <!-- Info Section -->
         <div id="info" class="section" style="display: none;">
             <h2>Info</h2>
-            <p>Some information about the Hunter world.</p>
+            <input type="text" id="infoSearch" placeholder="Search for information..." oninput="searchInfo()">
+            <ul id="infoList">
+                <li class="infoItem" onclick="showInfoDetails(this)">Nen</li>
+                <div class="fullInfo">
+                    <p>Nen: The technique that allows hunters to use their life energy.</p>
+                </div>
+                <li class="infoItem" onclick="showInfoDetails(this)">Hunter Exam</li>
+                <div class="fullInfo">
+                    <p>The Hunter Exam: A grueling test to earn a Hunter License.</p>
+                </div>
+                <li class="infoItem" onclick="showInfoDetails(this)">Greed Island</li>
+                <div class="fullInfo">
+                    <p>Greed Island: A game world that can lead to great wealth, but also grave danger.</p>
+                </div>
+            </ul>
+            <button onclick="navigateTo('home')">Back to Home</button>
+        </div>
+
+        <!-- Bounties Section -->
+        <div id="bounties" class="section" style="display: none;">
+            <h2>Bounties</h2>
+            <input type="text" id="bountySearch" placeholder="Search for a bounty..." oninput="searchBounties()">
+            <ul id="bountyList">
+                <li class="bountyItem" onclick="showBountyDetails(this)">Phantom Troupe</li>
+                <div class="fullInfo">
+                    <p>High bounty for each member. Proceed with caution.</p>
+                </div>
+                <li class="bountyItem" onclick="showBountyDetails(this)">Chrollo Lucilfer</li>
+                <div class="fullInfo">
+                    <p>Leader of the Phantom Troupe. Extremely dangerous.</p>
+                </div>
+            </ul>
+            <button onclick="navigateTo('home')">Back to Home</button>
+        </div>
+
+        <!-- Active Hunters Section -->
+        <div id="active-hunters" class="section" style="display: none;">
+            <h2>Active Hunters</h2>
+            <input type="text" id="hunterSearch" placeholder="Search for a hunter..." oninput="searchHunters()">
+            <ul id="hunterList">
+                <li class="hunterItem" onclick="showHunterDetails(this)">Gon</li>
+                <div class="fullInfo">
+                    <p>Gon: Known for incredible strength and tenacity.</p>
+                </div>
+                <li class="hunterItem" onclick="showHunterDetails(this)">Killua</li>
+                <div class="fullInfo">
+                    <p>Killua: Skilled in assassination and electricity techniques.</p>
+                </div>
+                <li class="hunterItem" onclick="showHunterDetails(this)">Jaston</li>
+                <div class="fullInfo">
+                    <p>Jaston: Leader of the Hunter Association, 3-Star Hunter. Little is known about his techniques.</p>
+                </div>
+                <li class="hunterItem" onclick="showHunterDetails(this)">Dylan</li>
+                <div class="fullInfo">
+                    <p>I'm glad you made it here. Go to the peak of Mount Helena, and look in a crack in a rock pointing to the North of the main peak.</p>
+                </div>
+                <li class="hunterItem" onclick="showHunterDetails(this)">Addie</li>
+                <div class="fullInfo">
+                    <p>I'm surprised you made it.</p>
+                </div>
+            </ul>
             <button onclick="navigateTo('home')">Back to Home</button>
         </div>
     </div>
