@@ -1,85 +1,102 @@
-// Password validation
-function checkPassword() {
-    // The original password is "YorkNew251", Base64 encoded
-    const encodedPassword = 'WW9ya01ldzI1MQ=='; // "YorkNew251" in Base64
-    const password = atob(encodedPassword); // Decode the Base64 string
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunter Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Login Section -->
+    <div id="login">
+        <h1>Welcome to the Hunter Website</h1>
+        <form onsubmit="return checkPassword()">
+            <label for="password">Enter Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Submit</button>
+        </form>
+        <p id="error-message"></p>
+    </div>
 
-    // Get user input
-    const userInput = document.getElementById('password').value;
+    <!-- Main Sections -->
+    <div id="content" style="display: none;">
+        <!-- Home Section -->
+        <div id="home">
+            <h2>Home</h2>
+            <p>Welcome, Hunter! Choose a section to explore:</p>
+            <button onclick="navigateTo('info')">Info</button>
+            <button onclick="navigateTo('bounties')">Bounties</button>
+            <button onclick="navigateTo('active-hunters')">Active Hunters</button>
+        </div>
 
-    if (userInput === password) {
-        alert("Access granted");
-        document.getElementById('login').style.display = 'none';
-        document.getElementById('content').style.display = 'block';
-        return false; // Prevent form submission
-    } else {
-        alert("Access denied");
-        return false; // Prevent form submission
-    }
-}
+        <!-- Info Section -->
+        <div id="info" class="section" style="display: none;">
+            <h2>Info</h2>
+            <input type="text" id="infoSearch" placeholder="Search for information..." oninput="searchInfo()">
+            <ul id="infoList">
+                <li class="infoItem" onclick="showInfoDetails(this)">Nen</li>
+                <div class="fullInfo">
+                    <p>Nen: The technique that allows hunters to use their life energy.</p>
+                </div>
+                <li class="infoItem" onclick="showInfoDetails(this)">Hunter Exam</li>
+                <div class="fullInfo">
+                    <p>The Hunter Exam: A grueling test to earn a Hunter License.</p>
+                </div>
+                <li class="infoItem" onclick="showInfoDetails(this)">Greed Island</li>
+                <div class="fullInfo">
+                    <p>Greed Island: A game world that can lead to great wealth, but also grave danger.</p>
+                </div>
+            </ul>
+            <button onclick="navigateTo('home')">Back to Home</button>
+        </div>
 
-// Navigation between sections
-function navigateTo(sectionId) {
-    // Hide all sections
-    const sections = document.querySelectorAll('.section');
-    sections.forEach((section) => {
-        section.style.display = 'none';
-    });
+        <!-- Bounties Section -->
+        <div id="bounties" class="section" style="display: none;">
+            <h2>Bounties</h2>
+            <input type="text" id="bountySearch" placeholder="Search for a bounty..." oninput="searchBounties()">
+            <ul id="bountyList">
+                <li class="bountyItem" onclick="showBountyDetails(this)">Phantom Troupe</li>
+                <div class="fullInfo">
+                    <p>High bounty for each member. Proceed with caution.</p>
+                </div>
+                <li class="bountyItem" onclick="showBountyDetails(this)">Chrollo Lucilfer</li>
+                <div class="fullInfo">
+                    <p>Leader of the Phantom Troupe. Extremely dangerous.</p>
+                </div>
+            </ul>
+            <button onclick="navigateTo('home')">Back to Home</button>
+        </div>
 
-    // Show the selected section
-    document.getElementById(sectionId).style.display = 'block';
-}
+        <!-- Active Hunters Section -->
+        <div id="active-hunters" class="section" style="display: none;">
+            <h2>Active Hunters</h2>
+            <input type="text" id="hunterSearch" placeholder="Search for a hunter..." oninput="searchHunters()">
+            <ul id="hunterList">
+                <li class="hunterItem" onclick="showHunterDetails(this)">Gon</li>
+                <div class="fullInfo">
+                    <p>Gon: Known for incredible strength and tenacity.</p>
+                </div>
+                <li class="hunterItem" onclick="showHunterDetails(this)">Killua</li>
+                <div class="fullInfo">
+                    <p>Killua: Skilled in assassination and electricity techniques.</p>
+                </div>
+                <li class="hunterItem" onclick="showHunterDetails(this)">Jaston</li>
+                <div class="fullInfo">
+                    <p>Jaston: Leader of the Hunter Association, 3-Star Hunter. Little is known about his techniques.</p>
+                </div>
+                <li class="hunterItem" onclick="showHunterDetails(this)">Dylan</li>
+                <div class="fullInfo">
+                    <p>Dylan: I'm glad you made it here. Go to the peak of Mount Helena, and look in a crack in a rock pointing to the North of the main peak.</p>
+                </div>
+                <li class="hunterItem" onclick="showHunterDetails(this)">Addie</li>
+                <div class="fullInfo">
+                    <p>Addie: I'm surprised you made it!</p>
+                </div>
+            </ul>
+            <button onclick="navigateTo('home')">Back to Home</button>
+        </div>
+    </div>
 
-// Search functions
-function searchInfo() {
-    const searchInput = document.getElementById('infoSearch').value.toLowerCase();
-    const infoList = document.getElementById('infoList');
-    const items = Array.from(infoList.getElementsByClassName('infoItem'));
-    items.forEach(item => {
-        const text = item.innerText.toLowerCase();
-        item.style.display = text.includes(searchInput) ? 'list-item' : 'none';
-    });
-}
-
-function searchBounties() {
-    const searchInput = document.getElementById('bountySearch').value.toLowerCase();
-    const bountyList = document.getElementById('bountyList');
-    const items = Array.from(bountyList.getElementsByClassName('bountyItem'));
-    items.forEach(item => {
-        const text = item.innerText.toLowerCase();
-        item.style.display = text.includes(searchInput) ? 'list-item' : 'none';
-    });
-}
-
-function searchHunters() {
-    const searchInput = document.getElementById('hunterSearch').value.toLowerCase();
-    const hunterList = document.getElementById('hunterList');
-    const items = Array.from(hunterList.getElementsByClassName('hunterItem'));
-    items.forEach(item => {
-        const text = item.innerText.toLowerCase();
-        item.style.display = text.includes(searchInput) ? 'list-item' : 'none';
-    });
-}
-
-// Show details for clicked item
-function showInfoDetails(item) {
-    const fullInfo = item.nextElementSibling;
-    fullInfo.style.display = fullInfo.style.display === 'block' ? 'none' : 'block';
-}
-
-function showBountyDetails(item) {
-    const fullInfo = item.nextElementSibling;
-    fullInfo.style.display = fullInfo.style.display === 'block' ? 'none' : 'block';
-}
-
-function showHunterDetails(item) {
-    const fullInfo = item.nextElementSibling;
-    fullInfo.style.display = fullInfo.style.display === 'block' ? 'none' : 'block';
-}
-
-// Sort items when the page loads
-window.onload = function() {
-    sortList('infoList');
-    sortList('bountyList');
-    sortList('hunterList');
-};
+    <script src="script.js"></script>
+</body>
+</html>
