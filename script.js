@@ -1,8 +1,8 @@
-// Password validation (Password == Quitcheatinglookinghere) ,:<HunterX>
+// Password validation
 function checkPassword() {
     const password = document.getElementById('password').value;
 
-    if (password === 'YorkNew251') {
+    if (password === 'YorkNew251') { 
         document.getElementById('login').style.display = 'none';
         document.getElementById('content').style.display = 'block';
         navigateTo('home'); // Go to home after successful login
@@ -58,17 +58,17 @@ function searchHunters() {
 
 // Show details for clicked item
 function showInfoDetails(item) {
-    const fullInfo = item.querySelector('.fullInfo');  // Use querySelector instead of nextElementSibling
+    const fullInfo = item.nextElementSibling;
     fullInfo.style.display = fullInfo.style.display === 'block' ? 'none' : 'block';
 }
 
 function showBountyDetails(item) {
-    const fullInfo = item.querySelector('.fullInfo');  // Same here for bounties
+    const fullInfo = item.nextElementSibling;
     fullInfo.style.display = fullInfo.style.display === 'block' ? 'none' : 'block';
 }
 
 function showHunterDetails(item) {
-    const fullInfo = item.querySelector('.fullInfo');  // And for hunters
+    const fullInfo = item.nextElementSibling;
     fullInfo.style.display = fullInfo.style.display === 'block' ? 'none' : 'block';
 }
 
