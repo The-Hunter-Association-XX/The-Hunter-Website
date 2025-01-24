@@ -2,7 +2,7 @@
 function checkPassword() {
     const password = document.getElementById('password').value;
 
-    if (password === 'YorkNew251') { 
+    if (password === 'hunterx') { // Updated password
         document.getElementById('login').style.display = 'none';
         document.getElementById('content').style.display = 'block';
         navigateTo('home'); // Go to home after successful login
